@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName">
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" isd="lastName">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div>
+        <label for="phoneEmail">How should we contact you?</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="phoneNumber" value="option1" (click)="Onclick()" #phoneEle >
+        <label class="form-check-label" for="phoneNumber" >Phone</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="emailId" value="option2" (click)="Onclick()" #emailEle>
+        <label class="form-check-label" for="emailId" >Email</label>
+      </div>
+    </div>
+    
+    <div class="col-6" *ngIf="showPhoneNumberEle">
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber">
+      </div>
+    </div>
+
+    <div class="col-6" *ngIf="showEmailEle">
+      <div class="form-group">
+        <label for="emailAddress">Email Address</label>
+        <input type="email" class="form-control" id="emailAddress">
+      </div>
+    </div>
+  </div>
+</div>
